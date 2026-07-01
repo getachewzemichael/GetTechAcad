@@ -1,0 +1,154 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Contact | Get.TechAcad{% endblock %}
+{% block nav_contact %}active{% endblock %}
+
+{% block content %}
+
+<div class="page-hero">
+  <div class="container">
+    <h1 class="page-hero-title">Get In Touch</h1>
+    <p class="page-hero-sub">Have a question, project idea, or want to collaborate? Let's talk.</p>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="row g-5">
+
+      <!-- Contact Info -->
+      <div class="col-lg-4 fade-up">
+        <div class="contact-info-card">
+          <h4 class="contact-page-title">Contact Information</h4>
+
+          <div class="contact-item">
+            <div class="contact-item-icon">📍</div>
+            <div>
+              <div class="contact-item-label">Location</div>
+              <div class="contact-item-value">Mekelle, Tigray, Ethiopia</div>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item-icon">📧</div>
+            <div>
+              <div class="contact-item-label">Email</div>
+              <div class="contact-item-value">
+                <a href="mailto:getachew01020355@gmail.com" class="contact-link">getachew01020355@gmail.com</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item-icon">💻</div>
+            <div>
+              <div class="contact-item-label">GitHub</div>
+              <div class="contact-item-value">
+                <a href="https://github.com/getachewZ" target="_blank" class="contact-link">github.com/getachewZ</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item-icon">🎥</div>
+            <div>
+              <div class="contact-item-label">YouTube</div>
+              <div class="contact-item-value">
+                <a href="https://www.youtube.com/@GetTechAcad" target="_blank" class="contact-link">Get.TechAcad</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item-icon">🌐</div>
+            <div>
+              <div class="contact-item-label">Brand</div>
+              <div class="contact-item-value">Get.TechAcad – Tech + Growth</div>
+            </div>
+          </div>
+
+          <div class="contact-social-wrap">
+            <div class="contact-social-label">Follow Me</div>
+            <div class="social-links">
+              <a href="https://github.com/getachewZ" target="_blank" class="social-link" title="GitHub" aria-label="GitHub"><i class="bi bi-github"></i></a>
+              <a href="https://www.youtube.com/@GetTechAcad" target="_blank" class="social-link" title="YouTube" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+              <a href="mailto:getachew01020355@gmail.com" class="social-link" title="Email" aria-label="Email"><i class="bi bi-envelope"></i></a>
+              <a href="https://linkedin.com" target="_blank" class="social-link" title="LinkedIn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-lg-8 fade-up">
+        <div class="card-dark">
+          <h4 class="contact-form-title">Send a Message</h4>
+          <p class="contact-form-sub">Fill out the form below and I'll get back to you as soon as possible.</p>
+
+          <form method="POST" novalidate>
+            {% csrf_token %}
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">{{ form.name.label }}</label>
+                {{ form.name }}
+                {% if form.name.errors %}<div class="form-error">{{ form.name.errors.0 }}</div>{% endif %}
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">{{ form.email.label }}</label>
+                {{ form.email }}
+                {% if form.email.errors %}<div class="form-error">{{ form.email.errors.0 }}</div>{% endif %}
+              </div>
+              <div class="col-12">
+                <label class="form-label">{{ form.subject.label }}</label>
+                {{ form.subject }}
+                {% if form.subject.errors %}<div class="form-error">{{ form.subject.errors.0 }}</div>{% endif %}
+              </div>
+              <div class="col-12">
+                <label class="form-label">{{ form.message.label }}</label>
+                {{ form.message }}
+                {% if form.message.errors %}<div class="form-error">{{ form.message.errors.0 }}</div>{% endif %}
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn-primary-custom form-submit-btn">
+                  <i class="bi bi-send me-2"></i>Send Message
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="row g-4 mt-3">
+      <div class="col-md-4 fade-up">
+        <div class="card-dark text-center">
+          <span class="quick-action-icon">📚</span>
+          <h5 class="quick-action-title">Book Training</h5>
+          <p class="card-text quick-action-text">Schedule a training session for yourself or your team.</p>
+          <a href="{% url 'book_training' %}" class="btn-primary-custom quick-action-btn">Book Now</a>
+        </div>
+      </div>
+      <div class="col-md-4 fade-up">
+        <div class="card-dark text-center">
+          <span class="quick-action-icon">💼</span>
+          <h5 class="quick-action-title">View Services</h5>
+          <p class="card-text quick-action-text">Explore all training, consulting, and development services.</p>
+          <a href="{% url 'services' %}" class="btn-outline-custom quick-action-btn">See Services</a>
+        </div>
+      </div>
+      <div class="col-md-4 fade-up">
+        <div class="card-dark text-center">
+          <span class="quick-action-icon">🎥</span>
+          <h5 class="quick-action-title">YouTube Channel</h5>
+          <p class="card-text quick-action-text">Watch free technology tutorials and training content.</p>
+          <a href="https://www.youtube.com/@GetTechAcad" target="_blank" class="btn-outline-custom quick-action-btn">Subscribe</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,205 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Get.TechAcad | Getachew Zemicheal - Home{% endblock %}
+{% block nav_home %}active{% endblock %}
+
+{% block content %}
+
+<!-- HERO -->
+<section class="hero-section">
+  <div class="container">
+    <div class="row align-items-center g-5">
+
+      <div class="col-lg-7">
+        <div class="hero-badge">🌍 Mekelle, Ethiopia &nbsp;|&nbsp; Available for Work</div>
+        <h1 class="hero-name">GETACHEW<br>ZEMICHEAL HADGU</h1>
+        <div class="hero-titles">
+          <span>💻 CS Engineer</span>
+          <span>📈 Digital Marketing Trainer</span>
+          <span>🤖 AI Developer</span>
+          <span>🌐 Tech Consultant</span>
+        </div>
+        <p class="typed-line">
+          <span id="typed-text"></span><span class="typed-cursor">|</span>
+        </p>
+        <p class="hero-desc">
+          Empowering learners, professionals, and businesses through technology,
+          digital marketing, artificial intelligence, and practical skills training.
+        </p>
+        <p class="hero-founder">Founder of <span>Get.TechAcad</span> – Tech + Growth</p>
+        <div class="hero-btns">
+          <a href="{% url 'projects' %}" class="btn-primary-custom"><i class="bi bi-grid me-2"></i>View Portfolio</a>
+          {% if cv %}
+            <a href="{{ cv.cv_file.url }}" class="btn-outline-custom" download><i class="bi bi-download me-2"></i>Download CV</a>
+          {% else %}
+            <a href="#" class="btn-outline-custom"><i class="bi bi-download me-2"></i>Download CV</a>
+          {% endif %}
+          <a href="{% url 'contact' %}" class="btn-outline-custom"><i class="bi bi-chat-dots me-2"></i>Contact Me</a>
+          <a href="{% url 'book_training' %}" class="btn-outline-custom"><i class="bi bi-calendar-check me-2"></i>Book Training</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item fade-up"><span class="stat-icon">🎓</span><span class="stat-text">BSc Computer Science &amp; Engineering</span></div>
+          <div class="stat-item fade-up"><span class="stat-icon">🏆</span><span class="stat-text">CGPA: 3.83 / 4.00</span></div>
+          <div class="stat-item fade-up"><span class="stat-icon">👨‍🏫</span><span class="stat-text">Technology Trainer</span></div>
+          <div class="stat-item fade-up"><span class="stat-icon">📈</span><span class="stat-text">Digital Marketing Instructor</span></div>
+          <div class="stat-item fade-up"><span class="stat-icon">🤖</span><span class="stat-text">AI &amp; Data Science Enthusiast</span></div>
+          <div class="stat-item fade-up"><span class="stat-icon">🎥</span><span class="stat-text">Creator of Get.TechAcad</span></div>
+        </div>
+      </div>
+
+      <div class="col-lg-5 text-center">
+        <div class="hero-image-wrap">
+          <div class="orbit-ring orbit-ring-1"></div>
+          <div class="orbit-ring orbit-ring-2"></div>
+          {% if profile_photo %}
+            <img src="{{ profile_photo.photo.url }}" alt="{{ profile_photo.alt_text }}" class="hero-avatar fade-up">
+          {% else %}
+            <div class="hero-avatar-placeholder fade-up">
+              <div class="avatar-icon">👨‍💻</div>
+              <div class="avatar-name">Getachew Zemicheal Hadgu<br>
+                <small class="avatar-small-label">Get.TechAcad</small>
+              </div>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-5">
+      <div class="col-12">
+        <div class="mission-box fade-up">
+          <strong class="mission-label">Personal Mission:</strong><br>
+          "My mission is to bridge the gap between technology education and real-world industry demands
+          by delivering practical training, innovative solutions, and digital transformation strategies
+          that empower individuals and organizations."
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT I DO -->
+<section class="section-alt">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">What I Do</h2>
+      <div class="section-divider"></div>
+      <p class="section-subtitle">Combining technology expertise with practical training to drive impact</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-3 col-md-6 fade-up">
+        <div class="card-dark h-100 text-center">
+          <span class="card-icon">👨‍🏫</span>
+          <h4 class="card-title">Technology Training</h4>
+          <p class="card-text">Delivering practical, industry-relevant training in computer skills, Microsoft Office, networking, and AI fundamentals.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 fade-up">
+        <div class="card-dark h-100 text-center">
+          <span class="card-icon">📈</span>
+          <h4 class="card-title">Digital Marketing</h4>
+          <p class="card-text">Teaching SEO, social media marketing, content creation, analytics, and AI-powered marketing tools to help businesses grow.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 fade-up">
+        <div class="card-dark h-100 text-center">
+          <span class="card-icon">💻</span>
+          <h4 class="card-title">Software Development</h4>
+          <p class="card-text">Building web apps, admin dashboards, AI applications, and database solutions using Python, Django, ReactJS, and more.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 fade-up">
+        <div class="card-dark h-100 text-center">
+          <span class="card-icon">🤖</span>
+          <h4 class="card-title">AI &amp; Data Science</h4>
+          <p class="card-text">Applying machine learning, computer vision, predictive analytics, and data visualization to solve real-world problems.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED PROJECTS -->
+<section>
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="section-divider"></div>
+      <p class="section-subtitle">Selected work that showcases my skills and passion</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="project-card">
+          <div class="project-header"><span class="project-icon">🎲</span><h5 class="project-name">Ethiopian Digital Bingo</h5></div>
+          <div class="project-body">
+            <p class="project-desc">A modern digital bingo ecosystem designed for mobile users and administrators.</p>
+            <div><span class="tech-badge">Flutter</span><span class="tech-badge">Django</span><span class="tech-badge">PostgreSQL</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="project-card">
+          <div class="project-header"><span class="project-icon">🏥</span><h5 class="project-name">MdPredInsight</h5></div>
+          <div class="project-body">
+            <p class="project-desc">Interactive medical analytics dashboard with predictive analytics and decision support.</p>
+            <div><span class="tech-badge">ReactJS</span><span class="tech-badge">Flask</span><span class="tech-badge">ML</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="project-card">
+          <div class="project-header"><span class="project-icon">🤟</span><h5 class="project-name">Sign Language Detection</h5></div>
+          <div class="project-body">
+            <p class="project-desc">AI-powered sign language recognition for accessibility using computer vision.</p>
+            <div><span class="tech-badge">Python</span><span class="tech-badge">TensorFlow</span><span class="tech-badge">OpenCV</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-4">
+      <a href="{% url 'projects' %}" class="btn-primary-custom"><i class="bi bi-grid me-2"></i>View All Projects</a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section-alt">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">What People Say</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="row g-4 justify-content-center">
+      <div class="col-lg-5 col-md-6 fade-up">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"Getachew delivers technology concepts clearly and professionally while making learning practical and engaging."</p>
+          <div class="testimonial-attr">— Training Participant</div>
+        </div>
+      </div>
+      <div class="col-lg-5 col-md-6 fade-up">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"His digital marketing training provided valuable real-world skills that can be applied immediately."</p>
+          <div class="testimonial-attr">— Digital Marketing Student</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section>
+  <div class="container">
+    <div class="text-center cta-box">
+      <h2 class="cta-box-title">Ready to Learn &amp; Grow?</h2>
+      <p class="cta-box-text">Book a training session, explore my services, or get in touch to discuss how we can work together.</p>
+      <div class="d-flex gap-3 justify-content-center flex-wrap">
+        <a href="{% url 'book_training' %}" class="btn-primary-custom"><i class="bi bi-calendar-check me-2"></i>Book Training</a>
+        <a href="{% url 'contact' %}" class="btn-outline-custom"><i class="bi bi-chat-dots me-2"></i>Get In Touch</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

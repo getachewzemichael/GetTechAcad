@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Book Training | Get.TechAcad{% endblock %}
+
+{% block content %}
+
+<div class="page-hero">
+  <div class="container">
+    <h1 class="page-hero-title">Book a Training Session</h1>
+    <p class="page-hero-sub">Start your learning journey with a personalized training program</p>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="row g-5">
+
+      <!-- Booking Form -->
+      <div class="col-lg-7 fade-up">
+        <div class="card-dark">
+          <h4 class="booking-form-title">Training Request Form</h4>
+          <p class="booking-form-sub">
+            Fill in your details and preferred training topic. I'll reach out within 24 hours to confirm your session.
+          </p>
+          <form method="POST" novalidate>
+            {% csrf_token %}
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">{{ form.name.label }}</label>
+                {{ form.name }}
+                {% if form.name.errors %}<div class="form-error">{{ form.name.errors.0 }}</div>{% endif %}
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">{{ form.email.label }}</label>
+                {{ form.email }}
+                {% if form.email.errors %}<div class="form-error">{{ form.email.errors.0 }}</div>{% endif %}
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">{{ form.phone.label }}</label>
+                {{ form.phone }}
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">{{ form.training_type.label }}</label>
+                {{ form.training_type }}
+                {% if form.training_type.errors %}<div class="form-error">{{ form.training_type.errors.0 }}</div>{% endif %}
+              </div>
+              <div class="col-12">
+                <label class="form-label">
+                  {{ form.message.label }} <span class="optional-label">(Optional)</span>
+                </label>
+                {{ form.message }}
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn-primary-custom form-submit-btn">
+                  <i class="bi bi-calendar-check me-2"></i>Submit Booking Request
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="col-lg-5">
+
+        <!-- Available Programs -->
+        <div class="card-dark fade-up mb-4">
+          <h5 class="booking-sidebar-title">📚 Available Training Programs</h5>
+          <div class="booking-program-list">
+
+            <div class="booking-program-item">
+              <span class="booking-program-icon">🖥️</span>
+              <div>
+                <div class="booking-program-name">Basic Computer Skills</div>
+                <div class="booking-program-sub">Windows, Internet, File Management, Digital Literacy</div>
+              </div>
+            </div>
+
+            <div class="booking-program-item">
+              <span class="booking-program-icon">💻</span>
+              <div>
+                <div class="booking-program-name">Python-Django Full Stack Web Development</div>
+                <div class="booking-program-sub">Python, Django, HTML/CSS/JS, REST APIs, Deployment</div>
+              </div>
+            </div>
+
+            <div class="booking-program-item">
+              <span class="booking-program-icon">🤖</span>
+              <div>
+                <div class="booking-program-name">AI Full Course — Prompt Engineering to Practical AI</div>
+                <div class="booking-program-sub">ChatGPT, Prompt Engineering, AI Workflows, Real-World AI Tools</div>
+              </div>
+            </div>
+
+            <div class="booking-program-item">
+              <span class="booking-program-icon">📈</span>
+              <div>
+                <div class="booking-program-name">Digital Marketing Full Course</div>
+                <div class="booking-program-sub">SEO, Social Media, Content Marketing, Analytics, Ads</div>
+              </div>
+            </div>
+
+            <div class="booking-program-item">
+              <span class="booking-program-icon">📱</span>
+              <div>
+                <div class="booking-program-name">Social Media Marketing Agency (SMMA)</div>
+                <div class="booking-program-sub">Build &amp; Run a Profitable SMMA Business</div>
+              </div>
+            </div>
+
+            <div class="booking-program-item">
+              <span class="booking-program-icon">🎬</span>
+              <div>
+                <div class="booking-program-name">Video Editing With CapCut</div>
+                <div class="booking-program-sub">Cuts, Transitions, Effects, Captions, Export for Social Media</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- What to Expect -->
+        <div class="card-dark fade-up mb-4">
+          <h5 class="booking-sidebar-title">⚡ What to Expect</h5>
+          <ul class="booking-expect-list">
+            <li><span class="booking-expect-check">✔</span> Response within 24 hours</li>
+            <li><span class="booking-expect-check">✔</span> Personalized training plan</li>
+            <li><span class="booking-expect-check">✔</span> Practical, hands-on sessions</li>
+            <li><span class="booking-expect-check">✔</span> Flexible scheduling</li>
+            <li><span class="booking-expect-check">✔</span> Post-training support &amp; resources</li>
+          </ul>
+        </div>
+
+        <!-- Direct Contact -->
+        <div class="card-dark fade-up">
+          <h5 class="booking-direct-title">📞 Prefer Direct Contact?</h5>
+          <p class="booking-direct-text">
+            Reach out directly via email or check out the contact page for all options.
+          </p>
+          <a href="mailto:getachew01020355@gmail.com" class="btn-outline-custom booking-email-btn">
+            <i class="bi bi-envelope me-2"></i>getachew01020355@gmail.com
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Certifications | Get.TechAcad{% endblock %}
+{% block nav_certifications %}active{% endblock %}
+
+{% block content %}
+
+<div class="page-hero">
+  <div class="container">
+    <h1 class="page-hero-title">Certifications</h1>
+    <p class="page-hero-sub">Continuous learning and professional development</p>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+
+    <div class="row g-4 mb-5">
+
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="cert-card h-100">
+          <div class="cert-icon">🌐</div>
+          <div class="cert-issuer">Cisco Networking Academy</div>
+          <h5 class="cert-name">Introduction to Cybersecurity</h5>
+          <p class="cert-body-text">Foundations of cybersecurity, threat landscape, and network protection strategies.</p>
+          <div class="cert-badge-wrap"><span class="tech-badge">Cybersecurity</span><span class="tech-badge">Networking</span></div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="cert-card h-100">
+          <div class="cert-icon">🔗</div>
+          <div class="cert-issuer">Cisco Networking Academy</div>
+          <h5 class="cert-name">Networking Fundamentals</h5>
+          <p class="cert-body-text">Core networking concepts, protocols, IP addressing, and infrastructure design.</p>
+          <div class="cert-badge-wrap"><span class="tech-badge">TCP/IP</span><span class="tech-badge">Cisco</span></div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="cert-card h-100">
+          <div class="cert-icon">📊</div>
+          <div class="cert-issuer">LinkedIn Learning</div>
+          <h5 class="cert-name">Career Skills in Data Analytics</h5>
+          <p class="cert-body-text">Data analysis techniques, tools, and career preparation for the data industry.</p>
+          <div class="cert-badge-wrap"><span class="tech-badge">Data Analytics</span><span class="tech-badge">LinkedIn</span></div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="cert-card h-100">
+          <div class="cert-icon">📈</div>
+          <div class="cert-issuer">LinkedIn Learning</div>
+          <h5 class="cert-name">Data Analytics Foundations</h5>
+          <p class="cert-body-text">Foundational knowledge in data analytics workflows, tools, and interpretation.</p>
+          <div class="cert-badge-wrap"><span class="tech-badge">Analytics</span><span class="tech-badge">Data Science</span></div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="cert-card h-100">
+          <div class="cert-icon">🤖</div>
+          <div class="cert-issuer">Prodigy InfoTech</div>
+          <h5 class="cert-name">Data Science Internship</h5>
+          <p class="cert-body-text">Hands-on data science projects covering ML, data processing, and visualization.</p>
+          <div class="cert-badge-wrap"><span class="tech-badge">Data Science</span><span class="tech-badge">ML</span><span class="tech-badge">Python</span></div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="cert-card h-100">
+          <div class="cert-icon">🎓</div>
+          <div class="cert-issuer">Mekelle University</div>
+          <h5 class="cert-name">BSc Computer Science &amp; Engineering</h5>
+          <p class="cert-body-text">Four-year degree in Computer Science &amp; Engineering with CGPA 3.83/4.00.</p>
+          <div class="cert-badge-wrap"><span class="tech-badge cert-gold">🏆 CGPA: 3.83</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Training Portfolio -->
+    <div class="text-center mb-5 fade-up">
+      <h2 class="section-title">Training Portfolio</h2>
+      <div class="section-divider"></div>
+      <p class="section-subtitle">Courses I have designed and delivered</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="card-dark h-100">
+          <span class="card-icon">🖥️</span>
+          <h4 class="card-title">Basic Computer Skills</h4>
+          <ul class="feature-list"><li>Windows OS Navigation</li><li>File Management</li><li>Internet &amp; Browsing</li><li>Email Communication</li><li>Office Applications Overview</li></ul>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="card-dark h-100">
+          <span class="card-icon">📋</span>
+          <h4 class="card-title">Microsoft Office Suite</h4>
+          <ul class="feature-list"><li>Microsoft Word</li><li>Microsoft Excel</li><li>Microsoft PowerPoint</li><li>Microsoft Access</li><li>Practical Projects</li></ul>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="card-dark h-100">
+          <span class="card-icon">📢</span>
+          <h4 class="card-title">Digital Marketing</h4>
+          <ul class="feature-list"><li>SEO Strategy</li><li>Social Media Marketing</li><li>Content Marketing</li><li>Analytics &amp; Reporting</li><li>AI Marketing Tools</li></ul>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="card-dark h-100">
+          <span class="card-icon">🤖</span>
+          <h4 class="card-title">AI Fundamentals</h4>
+          <ul class="feature-list"><li>AI Concepts &amp; Overview</li><li>Machine Learning Basics</li><li>AI Productivity Tools</li><li>ChatGPT &amp; LLM Usage</li><li>Practical AI Applications</li></ul>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="card-dark h-100">
+          <span class="card-icon">🔒</span>
+          <h4 class="card-title">Networking &amp; Security</h4>
+          <ul class="feature-list"><li>Network Fundamentals</li><li>Cybersecurity Awareness</li><li>Network Security Basics</li><li>Data Protection Practices</li><li>Safe Internet Usage</li></ul>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="card-dark h-100">
+          <span class="card-icon">💻</span>
+          <h4 class="card-title">Web Development Basics</h4>
+          <ul class="feature-list"><li>HTML Structure</li><li>CSS Styling</li><li>JavaScript Basics</li><li>Responsive Design</li><li>Build Simple Websites</li></ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{% endblock %}

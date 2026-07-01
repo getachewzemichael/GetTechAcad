@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Projects | Get.TechAcad{% endblock %}
+{% block nav_projects %}active{% endblock %}
+
+{% block content %}
+
+<div class="page-hero">
+  <div class="container">
+    <h1 class="page-hero-title">Featured Projects</h1>
+    <p class="page-hero-sub">Real-world solutions built with passion and precision</p>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="row g-4">
+
+      <div class="col-lg-6 fade-up">
+        <div class="project-card h-100">
+          <div class="project-header">
+            <span class="project-icon">🎲</span>
+            <div><h5 class="project-name">Ethiopian Digital Bingo Platform</h5><div class="project-sub">Full-Stack Mobile + Web Application</div></div>
+          </div>
+          <div class="project-body">
+            <p class="project-desc">A modern digital bingo ecosystem designed for mobile users and administrators. Features a complete coin economy, real-time game management, and integrated payment system.</p>
+            <div class="project-tech-wrap"><span class="tech-badge">Flutter</span><span class="tech-badge">Django</span><span class="tech-badge">PostgreSQL</span><span class="tech-badge">REST API</span></div>
+            <h6 class="project-feature-label">Key Features</h6>
+            <ul class="feature-list"><li>Coin Economy System</li><li>Admin Dashboard &amp; Analytics</li><li>Payment Integration</li><li>Real-Time Game Management</li><li>Mobile-First Design</li></ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 fade-up">
+        <div class="project-card h-100">
+          <div class="project-header">
+            <span class="project-icon">🏥</span>
+            <div><h5 class="project-name">MdPredInsight</h5><div class="project-sub">Medical Analytics Dashboard</div></div>
+          </div>
+          <div class="project-body">
+            <p class="project-desc">Interactive medical analytics dashboard combining machine learning predictions with intuitive data visualization for informed clinical decision support.</p>
+            <div class="project-tech-wrap"><span class="tech-badge">ReactJS</span><span class="tech-badge">Flask</span><span class="tech-badge">NodeJS</span><span class="tech-badge">Machine Learning</span></div>
+            <h6 class="project-feature-label">Key Features</h6>
+            <ul class="feature-list"><li>Predictive Analytics Engine</li><li>Medical Data Visualization</li><li>Clinical Decision Support</li><li>Interactive Dashboard</li><li>Real-Time Data Processing</li></ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 fade-up">
+        <div class="project-card h-100">
+          <div class="project-header">
+            <span class="project-icon">🤟</span>
+            <div><h5 class="project-name">Sign Language Detection System</h5><div class="project-sub">AI-Powered Computer Vision</div></div>
+          </div>
+          <div class="project-body">
+            <p class="project-desc">AI-powered sign language recognition system that bridges communication gaps for the hearing-impaired using real-time gesture detection and classification.</p>
+            <div class="project-tech-wrap"><span class="tech-badge">Python</span><span class="tech-badge">TensorFlow</span><span class="tech-badge">OpenCV</span><span class="tech-badge">Deep Learning</span></div>
+            <h6 class="project-feature-label">Key Features</h6>
+            <ul class="feature-list"><li>Real-Time Gesture Recognition</li><li>Accessibility Enhancement</li><li>Deep Learning Model</li><li>Live Camera Processing</li><li>High Accuracy Detection</li></ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 fade-up">
+        <div class="project-card h-100">
+          <div class="project-header">
+            <span class="project-icon">🧾</span>
+            <div><h5 class="project-name">Automatic Receipt Scanner</h5><div class="project-sub">OCR &amp; Computer Vision App</div></div>
+          </div>
+          <div class="project-body">
+            <p class="project-desc">Computer vision application for automated receipt data extraction. Automatically detects, scans, and extracts key information for expense tracking and management.</p>
+            <div class="project-tech-wrap"><span class="tech-badge">Python</span><span class="tech-badge">OCR</span><span class="tech-badge">OpenCV</span><span class="tech-badge">Image Processing</span></div>
+            <h6 class="project-feature-label">Key Features</h6>
+            <ul class="feature-list"><li>Automated Receipt Detection</li><li>Intelligent Data Extraction</li><li>Expense Tracking Support</li><li>Multi-Format Support</li><li>Structured Data Output</li></ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-12 fade-up">
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-icon">🚀</span>
+            <div><h5 class="project-name">Get.TechAcad – Tech + Growth Platform</h5><div class="project-sub">Technology Learning &amp; Growth Ecosystem</div></div>
+          </div>
+          <div class="project-body">
+            <div class="row">
+              <div class="col-md-8">
+                <p class="project-desc">A comprehensive technology learning and growth platform built to empower individuals and professionals through practical digital education, AI tools training, and career development resources.</p>
+                <div class="project-tech-wrap"><span class="tech-badge">Django</span><span class="tech-badge">Python</span><span class="tech-badge">HTML/CSS/JS</span><span class="tech-badge">Bootstrap</span><span class="tech-badge">SQLite</span></div>
+              </div>
+              <div class="col-md-4">
+                <h6 class="project-feature-label">Focus Areas</h6>
+                <ul class="feature-list"><li>Technology Education</li><li>AI Tools &amp; Training</li><li>Digital Marketing</li><li>Computer Skills</li><li>Career Development</li></ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="text-center mt-5 fade-up">
+      <div class="github-cta-box">
+        <div class="github-cta-icon">💻</div>
+        <h4 class="github-cta-title">More on GitHub</h4>
+        <p class="github-cta-text">Explore more projects and open source contributions on my GitHub profile.</p>
+        <a href="https://github.com/getachewZ" target="_blank" class="btn-primary-custom"><i class="bi bi-github me-2"></i>Visit GitHub Profile</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{% endblock %}

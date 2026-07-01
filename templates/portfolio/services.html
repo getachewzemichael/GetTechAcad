@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Services | Get.TechAcad{% endblock %}
+{% block nav_services %}active{% endblock %}
+
+{% block content %}
+
+<div class="page-hero">
+  <div class="container">
+    <h1 class="page-hero-title">Services</h1>
+    <p class="page-hero-sub">What I offer to individuals, businesses, and organizations</p>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+
+    <div class="row g-4 mb-5">
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="service-card h-100">
+          <span class="service-icon">👨‍🏫</span>
+          <h4 class="service-title">Training Services</h4>
+          <p class="service-desc">Practical, hands-on technology training for individuals and groups at all skill levels.</p>
+          <ul class="service-list">
+            <li>Basic Computer Skills</li><li>Microsoft Office Suite</li><li>Digital Marketing</li>
+            <li>AI Tools &amp; Fundamentals</li><li>Technology Fundamentals</li><li>Web Development Basics</li>
+          </ul>
+          <div class="service-cta-wrap">
+            <a href="{% url 'book_training' %}" class="btn-primary-custom service-cta-btn">Book a Session</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="service-card h-100">
+          <span class="service-icon">🌐</span>
+          <h4 class="service-title">Consulting Services</h4>
+          <p class="service-desc">Strategic technology advisory to help organizations adopt digital solutions and drive growth.</p>
+          <ul class="service-list">
+            <li>Digital Transformation</li><li>Technology Advisory</li><li>Business Technology Solutions</li>
+            <li>Training Program Development</li><li>IT Strategy Planning</li><li>Digital Marketing Strategy</li>
+          </ul>
+          <div class="service-cta-wrap">
+            <a href="{% url 'contact' %}" class="btn-outline-custom service-cta-btn">Get a Consultation</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="service-card h-100">
+          <span class="service-icon">💻</span>
+          <h4 class="service-title">Development Services</h4>
+          <p class="service-desc">Custom software solutions — from websites to AI-powered applications and admin dashboards.</p>
+          <ul class="service-list">
+            <li>Website Development</li><li>Web Applications</li><li>Admin Dashboards</li>
+            <li>AI Applications</li><li>Database Solutions</li><li>API Development</li>
+          </ul>
+          <div class="service-cta-wrap">
+            <a href="{% url 'contact' %}" class="btn-outline-custom service-cta-btn">Discuss a Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- How It Works -->
+    <div class="text-center mb-5 fade-up">
+      <h2 class="section-title">How It Works</h2>
+      <div class="section-divider"></div>
+      <p class="section-subtitle">A simple, clear process to get started</p>
+    </div>
+    <div class="row g-4 mb-5">
+      <div class="col-lg-3 col-md-6 fade-up text-center">
+        <div class="card-dark h-100">
+          <div class="process-step-circle">1</div>
+          <h5>Contact Me</h5>
+          <p class="card-text">Reach out via the contact form, email, or book a training session directly.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 fade-up text-center">
+        <div class="card-dark h-100">
+          <div class="process-step-circle">2</div>
+          <h5>Discuss Needs</h5>
+          <p class="card-text">We discuss your specific goals, timeline, budget, and requirements together.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 fade-up text-center">
+        <div class="card-dark h-100">
+          <div class="process-step-circle">3</div>
+          <h5>Deliver Solutions</h5>
+          <p class="card-text">I deliver practical training, development work, or consulting with full support.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 fade-up text-center">
+        <div class="card-dark h-100">
+          <div class="process-step-circle">4</div>
+          <h5>Grow Together</h5>
+          <p class="card-text">Ongoing support, follow-up sessions, and long-term collaboration available.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Why Choose Me -->
+    <div class="text-center mb-5 fade-up">
+      <h2 class="section-title">Why Choose Me</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="row g-4 mb-5">
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="card-dark h-100 why-card"><span class="why-icon">🎯</span><div><h5 class="why-title">Practical Approach</h5><p class="card-text">All training and solutions are grounded in real-world industry scenarios, not just theory.</p></div></div>
+      </div>
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="card-dark h-100 why-card"><span class="why-icon">🏆</span><div><h5 class="why-title">Academic Excellence</h5><p class="card-text">BSc in CS&amp;E with CGPA 3.83/4.00 from Mekelle University — strong academic foundation.</p></div></div>
+      </div>
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="card-dark h-100 why-card"><span class="why-icon">🤝</span><div><h5 class="why-title">Dedicated Support</h5><p class="card-text">Committed to your success with ongoing mentoring and follow-up after every engagement.</p></div></div>
+      </div>
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="card-dark h-100 why-card"><span class="why-icon">🌍</span><div><h5 class="why-title">Local Understanding</h5><p class="card-text">Deep understanding of the Ethiopian tech landscape and its unique opportunities and challenges.</p></div></div>
+      </div>
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="card-dark h-100 why-card"><span class="why-icon">🤖</span><div><h5 class="why-title">AI-Integrated Skills</h5><p class="card-text">I incorporate the latest AI tools and technologies into training for future-ready learners.</p></div></div>
+      </div>
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="card-dark h-100 why-card"><span class="why-icon">💡</span><div><h5 class="why-title">Multi-Domain Expertise</h5><p class="card-text">Covers software dev, digital marketing, AI, cybersecurity, and office productivity in one place.</p></div></div>
+      </div>
+    </div>
+
+    <!-- Final CTA -->
+    <div class="text-center fade-up">
+      <div class="services-final-cta">
+        <h3 class="services-cta-title">Ready to Get Started?</h3>
+        <p class="services-cta-text">Whether you need training, consulting, or a custom-built solution — let's connect and make it happen.</p>
+        <div class="d-flex gap-3 justify-content-center flex-wrap">
+          <a href="{% url 'book_training' %}" class="btn-primary-custom"><i class="bi bi-calendar-check me-2"></i>Book Training</a>
+          <a href="{% url 'contact' %}" class="btn-outline-custom"><i class="bi bi-envelope me-2"></i>Send a Message</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,236 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ===== SEO META ===== -->
+  <meta name="description" content="{% block meta_description %}Getachew Zemicheal Hadgu â€” Computer Science Engineer, Digital Marketing Trainer, AI Developer & Technology Consultant. Founder of Get.TechAcad. Based in Mekelle, Ethiopia.{% endblock %}" />
+  <meta name="keywords" content="{% block meta_keywords %}Getachew Zemicheal, Get.TechAcad, Technology Trainer, Digital Marketing, AI Developer, Software Engineer, Ethiopia, Mekelle, Computer Science{% endblock %}" />
+  <meta name="author" content="Getachew Zemicheal Hadgu" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="{% block canonical %}https://gettechacad.com/{% endblock %}" />
+
+  <!-- ===== OPEN GRAPH (Facebook, LinkedIn, WhatsApp) ===== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{% block og_title %}Get.TechAcad | Getachew Zemicheal Hadgu{% endblock %}" />
+  <meta property="og:description" content="{% block og_description %}Computer Science Engineer, Digital Marketing Trainer, AI Developer & Technology Consultant. Founder of Get.TechAcad.{% endblock %}" />
+  <meta property="og:image" content="{% block og_image %}{% static 'images/og-image.png' %}{% endblock %}" />
+  <meta property="og:url" content="{% block og_url %}https://gettechacad.com/{% endblock %}" />
+  <meta property="og:site_name" content="Get.TechAcad" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- ===== TWITTER CARD ===== -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{% block twitter_title %}Get.TechAcad | Getachew Zemicheal Hadgu{% endblock %}" />
+  <meta name="twitter:description" content="{% block twitter_description %}Tech + Growth | Empowering through Technology Education, AI & Digital Marketing.{% endblock %}" />
+  <meta name="twitter:image" content="{% block twitter_image %}{% static 'images/og-image.png' %}{% endblock %}" />
+  <meta name="twitter:site" content="@GetTechAcad" />
+
+  <!-- ===== THEME COLOR (mobile browser chrome) ===== -->
+  <meta name="theme-color" content="#020d12" />
+  <meta name="msapplication-TileColor" content="#1fda57" />
+
+  <!-- ===== TITLE ===== -->
+  <title>{% block title %}Get.TechAcad | Getachew Zemicheal Hadgu{% endblock %}</title>
+
+  <!-- ===== FAVICON ===== -->
+  <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}" />
+  <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/apple-touch-icon.png' %}" />
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon-32x32.png' %}" />
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon-16x16.png' %}" />
+
+  <!-- ===== PERFORMANCE: DNS Prefetch & Preconnect ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="dns-prefetch" href="https://github.com" />
+  <link rel="dns-prefetch" href="https://youtube.com" />
+
+  <!-- ===== BOOTSTRAP 5 ===== -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- ===== BOOTSTRAP ICONS ===== -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- ===== GOOGLE FONTS ===== -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <!-- ===== CUSTOM CSS ===== -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  {% block extra_css %}{% endblock %}
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar navbar-expand-lg navbar-dark" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <a class="navbar-brand" href="{% url 'home' %}" aria-label="Get.TechAcad Home">
+      <span class="brand-get">Get</span><span class="brand-dot">.</span><span class="brand-tech">TechAcad</span>
+    </a>
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-1" role="menubar">
+        <li class="nav-item" role="none"><a class="nav-link {% block nav_home %}{% endblock %}" href="{% url 'home' %}" role="menuitem">Home</a></li>
+        <li class="nav-item" role="none"><a class="nav-link {% block nav_about %}{% endblock %}" href="{% url 'about' %}" role="menuitem">About</a></li>
+        <li class="nav-item" role="none"><a class="nav-link {% block nav_experience %}{% endblock %}" href="{% url 'experience' %}" role="menuitem">Experience</a></li>
+        <li class="nav-item" role="none"><a class="nav-link {% block nav_skills %}{% endblock %}" href="{% url 'skills' %}" role="menuitem">Skills</a></li>
+        <li class="nav-item" role="none"><a class="nav-link {% block nav_projects %}{% endblock %}" href="{% url 'projects' %}" role="menuitem">Projects</a></li>
+        <li class="nav-item" role="none"><a class="nav-link {% block nav_certifications %}{% endblock %}" href="{% url 'certifications' %}" role="menuitem">Certificates</a></li>
+        <li class="nav-item" role="none"><a class="nav-link {% block nav_services %}{% endblock %}" href="{% url 'services' %}" role="menuitem">Services</a></li>
+        <li class="nav-item" role="none"><a class="nav-link {% block nav_contact %}{% endblock %}" href="{% url 'contact' %}" role="menuitem">Contact</a></li>
+        <li class="nav-item ms-2" role="none">
+          <a class="btn-primary-custom" href="{% url 'book_training' %}" role="menuitem" aria-label="Book a Training Session">
+            &#128218; Book Training
+          </a>
+        </li>
+        <li class="nav-item ms-1" role="none">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+            <i class="bi bi-moon-fill" id="themeIcon" aria-hidden="true"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== FLASH MESSAGES ===== -->
+{% if messages %}
+<div class="container mt-3" role="alert" aria-live="polite">
+  {% for message in messages %}
+  <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+    {{ message }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  {% endfor %}
+</div>
+{% endif %}
+
+<!-- ===== MAIN CONTENT ===== -->
+<main id="main-content">{% block content %}{% endblock %}</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- Brand & Social -->
+      <div class="col-lg-4">
+        <div class="footer-brand">
+          <span class="brand-get">Get</span><span class="brand-dot">.</span><span class="brand-tech">TechAcad</span>
+        </div>
+        <div class="footer-tagline">Tech + Growth | Empowering through Technology</div>
+        <div class="social-links" aria-label="Social media links">
+          <a href="https://github.com/getachewZ" target="_blank" rel="noopener noreferrer"
+             class="social-link" aria-label="GitHub Profile">
+            <i class="bi bi-github" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.youtube.com/@GetTechAcad" target="_blank" rel="noopener noreferrer"
+             class="social-link" aria-label="Subscribe on YouTube">
+            <i class="bi bi-youtube" aria-hidden="true"></i>
+          </a>
+          <a href="mailto:getachew01020355@gmail.com"
+             class="social-link" aria-label="Send Email">
+            <i class="bi bi-envelope" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/getachew-zemicheal-82680319b/" target="_blank" rel="noopener noreferrer"
+             class="social-link" aria-label="LinkedIn Profile">
+            <i class="bi bi-linkedin" aria-hidden="true"></i>
+          </a>
+          <a href="tel:+251714534122"
+             class="social-link" aria-label="Call Phone">
+            <i class="bi bi-telephone" aria-hidden="true"></i>
+          </a>
+        </div>
+        <!-- YouTube Subscribe CTA -->
+        <a href="https://www.youtube.com/@GetTechAcad" target="_blank" rel="noopener noreferrer"
+           class="yt-subscribe-btn mt-3" aria-label="Subscribe to Get.TechAcad on YouTube">
+          <i class="bi bi-youtube me-2" aria-hidden="true"></i>Subscribe on YouTube
+        </a>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-lg-2 col-sm-6">
+        <h6 class="footer-heading">Quick Links</h6>
+        <ul class="footer-links" aria-label="Quick navigation links">
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'about' %}">About Me</a></li>
+          <li><a href="{% url 'experience' %}">Experience</a></li>
+          <li><a href="{% url 'projects' %}">Projects</a></li>
+          <li><a href="{% url 'services' %}">Services</a></li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Training -->
+      <div class="col-lg-3 col-sm-6">
+        <h6 class="footer-heading">Training Programs</h6>
+        <ul class="footer-links" aria-label="Training programs">
+          <li><a href="{% url 'book_training' %}">Basic Computer Skills</a></li>
+          <li><a href="{% url 'book_training' %}">Python-Django Full Stack</a></li>
+          <li><a href="{% url 'book_training' %}">AI Full Course</a></li>
+          <li><a href="{% url 'book_training' %}">Digital Marketing Full Course</a></li>
+          <li><a href="{% url 'book_training' %}">SMMA</a></li>
+          <li><a href="{% url 'book_training' %}">Video Editing With CapCut</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-lg-3">
+        <h6 class="footer-heading">Contact</h6>
+        <address class="footer-contact-text" style="font-style:normal;">
+          <p>
+            <i class="bi bi-geo-alt footer-contact-icon" aria-hidden="true"></i>
+            Mekelle, Tigray, Ethiopia
+          </p>
+          <p>
+            <i class="bi bi-envelope footer-contact-icon" aria-hidden="true"></i>
+            <a href="mailto:getachew01020355@gmail.com" class="footer-contact-link">
+              getachew01020355@gmail.com
+            </a>
+          </p>
+          <p>
+            <i class="bi bi-github footer-contact-icon" aria-hidden="true"></i>
+            <a href="https://github.com/getachewZ" target="_blank" rel="noopener noreferrer" class="footer-contact-link">
+              github.com/getachewZ
+            </a>
+          </p>
+          <p>
+            <i class="bi bi-youtube footer-contact-icon" aria-hidden="true"></i>
+            <a href="https://www.youtube.com/@GetTechAcad" target="_blank" rel="noopener noreferrer" class="footer-contact-link">
+              youtube.com/@GetTechAcad
+            </a>
+          </p>
+        </address>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>
+        &copy; <span id="footer-year"></span>
+        <strong class="footer-brand-inline">Get.TechAcad</strong>
+        | Getachew Zemicheal Hadgu. All rights reserved.
+        Built with Django &#x1F680;
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to Top -->
+<a href="#main-content" class="back-to-top" id="backToTop" aria-label="Back to top">
+  <i class="bi bi-arrow-up" aria-hidden="true"></i>
+</a>
+
+<!-- ===== SCRIPTS ===== -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{% static 'js/main.js' %}"></script>
+
+<!-- Dynamic year -->
+<script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+
+{% block extra_js %}{% endblock %}
+</body>
+</html>

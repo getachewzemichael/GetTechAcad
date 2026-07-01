@@ -1,0 +1,179 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}About Me | Get.TechAcad{% endblock %}
+{% block nav_about %}active{% endblock %}
+
+{% block content %}
+
+<div class="page-hero">
+  <div class="container">
+    <h1 class="page-hero-title">About Me</h1>
+    <p class="page-hero-sub">Know the person behind Get.TechAcad</p>
+  </div>
+</div>
+
+<!-- Who Am I -->
+<section>
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5 text-center fade-up">
+        <div class="about-avatar-wrap">
+          {% if profile_photo %}
+            <img src="{{ profile_photo.photo.url }}" alt="{{ profile_photo.alt_text }}" class="about-avatar">
+          {% else %}
+            <div class="about-avatar-placeholder">
+              <span class="about-avatar-icon">👨‍💻</span>
+              <span class="about-avatar-name">Getachew Zemicheal</span>
+            </div>
+          {% endif %}
+          <div class="about-badge about-badge-top">🏆 CGPA 3.83</div>
+          <div class="about-badge about-badge-bottom">🎓 BSc CS&amp;E</div>
+        </div>
+      </div>
+
+      <div class="col-lg-7 fade-up">
+        <div class="hero-badge">Who Am I?</div>
+        <h2 class="section-title about-who-title">Getachew Zemicheal Hadgu</h2>
+        <div class="about-mini-divider"></div>
+        <p class="about-body-text">
+          I am a <strong class="about-body-strong">Computer Science and Engineering graduate</strong> from
+          <strong class="about-body-accent">Mekelle University</strong> with expertise in software development,
+          digital marketing, artificial intelligence, data science, cybersecurity, and technical training.
+        </p>
+        <p class="about-body-text">
+          I am passionate about helping students, professionals, and businesses leverage technology to
+          improve productivity, solve problems, and create opportunities.
+        </p>
+        <p class="about-body-text-last">
+          As a trainer and technology consultant, I focus on delivering
+          <strong class="about-body-strong">practical, industry-relevant knowledge</strong> that prepares
+          learners for real-world challenges.
+        </p>
+        <div class="row g-3">
+          <div class="col-sm-6">
+            <div class="info-card">
+              <div class="info-card-label">Location</div>
+              <div class="info-card-value">📍 Mekelle, Tigray, Ethiopia</div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="info-card">
+              <div class="info-card-label">Email</div>
+              <div class="info-card-value">📧 getachew01020355@gmail.com</div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="info-card">
+              <div class="info-card-label">GitHub</div>
+              <div class="info-card-value">💻 github.com/getachewZ</div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="info-card">
+              <div class="info-card-label">YouTube</div>
+              <div class="info-card-value">🎥 Get.TechAcad</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Education -->
+<section class="about-section-alt">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Education</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-7 fade-up">
+        <div class="edu-card">
+          <div class="edu-card-top-bar"></div>
+          <div class="d-flex align-items-start gap-4">
+            <div class="edu-icon">🎓</div>
+            <div>
+              <div class="edu-degree-label">Bachelor of Science (BSc)</div>
+              <h3 class="edu-degree-title">Computer Science &amp; Engineering</h3>
+              <div class="edu-university">Mekelle University</div>
+              <div class="cgpa-badge">
+                <span class="cgpa-icon">🏆</span>
+                <div>
+                  <div class="cgpa-value">CGPA: 3.83 / 4.00</div>
+                  <div class="cgpa-sub">Outstanding Academic Performance</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Career Goal -->
+<section>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center fade-up">
+        <h2 class="section-title">Career Goal</h2>
+        <div class="section-divider"></div>
+        <div class="goal-card">
+          "To become a leading <strong class="goal-strong">technology educator</strong>,
+          <strong class="goal-strong">software engineer</strong>,
+          <strong class="goal-strong">AI specialist</strong>, and
+          <strong class="goal-strong">digital transformation consultant</strong>
+          while creating impactful learning experiences and innovative technology solutions."
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Areas of Passion -->
+<section class="about-section-alt">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Areas of Passion</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="row g-4 justify-content-center">
+      <div class="col-lg-2 col-md-3 col-4 fade-up text-center">
+        <div class="passion-card"><div class="passion-icon">🤖</div><div class="passion-label">AI &amp; ML</div></div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-4 fade-up text-center">
+        <div class="passion-card"><div class="passion-icon">📈</div><div class="passion-label">Digital Marketing</div></div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-4 fade-up text-center">
+        <div class="passion-card"><div class="passion-icon">💻</div><div class="passion-label">Web Dev</div></div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-4 fade-up text-center">
+        <div class="passion-card"><div class="passion-icon">👨‍🏫</div><div class="passion-label">Content Creation</div></div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-4 fade-up text-center">
+        <div class="passion-card"><div class="passion-icon">🔒</div><div class="passion-label">Cybersecurity</div></div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-4 fade-up text-center">
+        <div class="passion-card"><div class="passion-icon">📊</div><div class="passion-label">Data Science</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="about-cta-section">
+  <div class="container text-center">
+    <h3 class="about-cta-title">Let's Work Together</h3>
+    <p class="about-cta-text">Ready to collaborate, learn, or build something great?</p>
+    <div class="d-flex gap-3 justify-content-center flex-wrap">
+      <a href="{% url 'contact' %}" class="btn-primary-custom"><i class="bi bi-chat-dots me-2"></i>Contact Me</a>
+      <a href="{% url 'services' %}" class="btn-outline-custom"><i class="bi bi-grid me-2"></i>My Services</a>
+      {% if cv %}
+        <a href="{{ cv.cv_file.url }}" class="btn-outline-custom" download><i class="bi bi-download me-2"></i>Download CV</a>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% endblock %}
