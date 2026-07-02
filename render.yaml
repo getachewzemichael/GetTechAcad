@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: gettechacad
+    runtime: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn GetTechAcad.wsgi:application"
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: PYTHON_VERSION
+        value: 3.14.0
+      - key: EMAIL_HOST_USER
+        value: get.techacad@gmail.com
+      - key: EMAIL_HOST_PASSWORD
+        sync: false
