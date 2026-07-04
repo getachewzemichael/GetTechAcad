@@ -76,7 +76,19 @@ def book_training(request):
     return render(request, "portfolio/book_training.html", {"form": form})
 
 
-def download_cv(request):
+def debug_media(request):
+    """Temporary debug view - remove after fixing."""
+    from django.http import JsonResponse
+    cv = CVFile.objects.first()
+    photo = ProfilePhoto.objects.first()
+    return JsonResponse({
+        "cv_exists": cv is not None,
+        "cv_field_value": str(cv.cv_file) if cv else None,
+        "cv_url": cv.cv_file.url if cv else None,
+        "photo_exists": photo is not None,
+        "photo_field_value": str(photo.photo) if photo else None,
+        "photo_url": photo.photo.url if photo else None,
+    })
     cv = CVFile.objects.first()
     if not cv:
         raise Http404("CV not available.")
