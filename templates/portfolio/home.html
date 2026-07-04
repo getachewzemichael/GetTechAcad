@@ -30,7 +30,7 @@
         <div class="hero-btns">
           <a href="{% url 'projects' %}" class="btn-primary-custom"><i class="bi bi-grid me-2"></i>View Portfolio</a>
           {% if cv %}
-            <a href="{{ cv.cv_file.url }}" class="btn-outline-custom" download><i class="bi bi-download me-2"></i>Download CV</a>
+            <a href="{% url 'download_cv' %}" class="btn-outline-custom"><i class="bi bi-download me-2"></i>Download CV</a>
           {% else %}
             <a href="#" class="btn-outline-custom"><i class="bi bi-download me-2"></i>Download CV</a>
           {% endif %}

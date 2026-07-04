@@ -1,4 +1,6 @@
+import requests
 from django.shortcuts import render, redirect
+from django.http import HttpResponse, Http404
 from django.contrib import messages
 from .forms import ContactForm, BookingForm
 from .models import ProfilePhoto, CVFile
@@ -72,3 +74,17 @@ def book_training(request):
     else:
         form = BookingForm()
     return render(request, "portfolio/book_training.html", {"form": form})
+
+
+def download_cv(request):
+    cv = CVFile.objects.first()
+    if not cv:
+        raise Http404("CV not available.")
+    try:
+        response = requests.get(cv.cv_file.url, timeout=15)
+        response.raise_for_status()
+    except Exception:
+        raise Http404("CV could not be fetched.")
+    http_response = HttpResponse(response.content, content_type="application/pdf")
+    http_response["Content-Disposition"] = 'attachment; filename="Getachew_Zemicheal_Hadgu_CV.pdf"'
+    return http_response
