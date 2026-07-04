@@ -1,9 +1,10 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
 
 
 class ProfilePhoto(models.Model):
     """Single profile photo used on the home and about pages."""
-    photo = models.FileField(upload_to="profile/", verbose_name="Profile Photo")
+    photo = CloudinaryField("Profile Photo", folder="profile")
     alt_text = models.CharField(max_length=150, default="Getachew Zemicheal Hadgu")
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -22,7 +23,7 @@ class ProfilePhoto(models.Model):
 
 class CVFile(models.Model):
     """Uploadable CV/resume file served as a download across the site."""
-    cv_file = models.FileField(upload_to="cv/", verbose_name="CV File (PDF)")
+    cv_file = CloudinaryField("CV File (PDF)", folder="cv", resource_type="raw")
     label = models.CharField(max_length=100, default="Getachew Zemicheal Hadgu - CV")
     updated_at = models.DateTimeField(auto_now=True)
 
