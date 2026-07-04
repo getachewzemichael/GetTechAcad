@@ -1,6 +1,6 @@
 import requests
 from django.shortcuts import render, redirect
-from django.http import HttpResponse, Http404
+from django.http import HttpResponse, Http404, JsonResponse
 from django.contrib import messages
 from .forms import ContactForm, BookingForm
 from .models import ProfilePhoto, CVFile
@@ -78,7 +78,6 @@ def book_training(request):
 
 def debug_media(request):
     """Temporary debug view - remove after fixing."""
-    from django.http import JsonResponse
     cv = CVFile.objects.first()
     photo = ProfilePhoto.objects.first()
     return JsonResponse({
@@ -89,6 +88,9 @@ def debug_media(request):
         "photo_field_value": str(photo.photo) if photo else None,
         "photo_url": photo.photo.url if photo else None,
     })
+
+
+def download_cv(request):
     cv = CVFile.objects.first()
     if not cv:
         raise Http404("CV not available.")
