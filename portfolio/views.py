@@ -95,7 +95,9 @@ def download_cv(request):
     if not cv:
         raise Http404("CV not available.")
     try:
-        response = requests.get(cv.cv_file.url, timeout=15)
+        # Force https in case Cloudinary returns http
+        cv_url = cv.cv_file.url.replace("http://", "https://")
+        response = requests.get(cv_url, timeout=15)
         response.raise_for_status()
     except Exception:
         raise Http404("CV could not be fetched.")
