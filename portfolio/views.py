@@ -1,5 +1,3 @@
-import cloudinary
-import cloudinary.utils
 from django.shortcuts import render, redirect
 from django.http import Http404, JsonResponse, HttpResponseRedirect
 from django.contrib import messages
@@ -93,22 +91,22 @@ def debug_media(request):
 
 def download_cv(request):
     """
-    Redirect to a Cloudinary URL with fl_attachment flag so the browser
-    downloads the PDF instead of opening it. No server-side proxy needed.
+    Redirect to Cloudinary with fl_attachment injected into the URL
+    so the browser downloads the PDF directly from Cloudinary's CDN.
     """
     cv = CVFile.objects.first()
     if not cv:
         raise Http404("CV not available.")
 
-    # cv.cv_file stores the public_id e.g. "cv/nbtuc6fsv0oku0s6gq84"
-    public_id = str(cv.cv_file)
+    # Get the base URL and force https
+    base_url = cv.cv_file.url.replace("http://", "https://")
 
-    # Build a Cloudinary URL with fl_attachment to force browser download
-    download_url, _ = cloudinary.utils.cloudinary_url(
-        public_id,
-        resource_type="raw",
-        flags="attachment:Getachew_Zemicheal_Hadgu_CV",
-        secure=True,
+    # Inject fl_attachment into the Cloudinary URL
+    # From: https://res.cloudinary.com/xxx/raw/upload/v.../cv/filename
+    # To:   https://res.cloudinary.com/xxx/raw/upload/fl_attachment:CV_Name/v.../cv/filename
+    download_url = base_url.replace(
+        "/raw/upload/",
+        "/raw/upload/fl_attachment:Getachew_Zemicheal_Hadgu_CV/"
     )
 
     return HttpResponseRedirect(download_url)
