@@ -834,6 +834,17 @@ section { padding: 50px 0; }
 
 .cert-name { font-size: 1rem; font-weight: 700; margin-bottom: 0; }
 
+.cert-body-text { color: var(--text-muted); font-size: 0.88rem; margin: 0.6rem 0 0.5rem; }
+
+.cert-meta {
+  font-size: 0.78rem;
+  color: var(--accent);
+  margin-bottom: 0.6rem;
+  opacity: 0.85;
+}
+
+.cert-badge-wrap { margin-top: 0.75rem; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
 /* ===== SERVICES ===== */
 .service-card {
   background: var(--card-bg);
