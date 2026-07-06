@@ -845,6 +845,28 @@ section { padding: 50px 0; }
 
 .cert-badge-wrap { margin-top: 0.75rem; display: flex; flex-wrap: wrap; gap: 0.4rem; }
 
+.cert-verify-wrap { border-top: 1px solid var(--border); }
+
+.cert-verify-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: none;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--primary);
+  border-radius: 20px;
+  transition: var(--transition);
+}
+
+.cert-verify-btn:hover {
+  background: var(--primary);
+  color: #fff;
+  text-decoration: none;
+}
+
 /* ===== SERVICES ===== */
 .service-card {
   background: var(--card-bg);
