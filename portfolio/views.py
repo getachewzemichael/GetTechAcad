@@ -91,22 +91,30 @@ def debug_media(request):
 
 def download_cv(request):
     """
-    Redirect to Cloudinary with fl_attachment injected into the URL
-    so the browser downloads the PDF directly from Cloudinary's CDN.
+    Serve CV directly from static files - reliable, no auth issues.
+    Falls back to Cloudinary if static file not found.
     """
+    import os
+    from django.conf import settings as django_settings
+    from django.http import FileResponse
+
+    # Try static file first (committed to repo, always works)
+    static_cv_path = os.path.join(django_settings.BASE_DIR, "static", "cv", "Getachew_Zemicheal_Hadgu_CV.pdf")
+    if os.path.exists(static_cv_path):
+        response = FileResponse(
+            open(static_cv_path, "rb"),
+            content_type="application/pdf"
+        )
+        response["Content-Disposition"] = 'attachment; filename="Getachew_Zemicheal_Hadgu_CV.pdf"'
+        return response
+
+    # Fallback: redirect to Cloudinary
     cv = CVFile.objects.first()
     if not cv:
         raise Http404("CV not available.")
-
-    # Get the base URL and force https
     base_url = cv.cv_file.url.replace("http://", "https://")
-
-    # Inject fl_attachment into the Cloudinary URL
-    # From: https://res.cloudinary.com/xxx/raw/upload/v.../cv/filename
-    # To:   https://res.cloudinary.com/xxx/raw/upload/fl_attachment:CV_Name/v.../cv/filename
     download_url = base_url.replace(
         "/raw/upload/",
         "/raw/upload/fl_attachment:Getachew_Zemicheal_Hadgu_CV/"
     )
-
     return HttpResponseRedirect(download_url)
