@@ -23,7 +23,7 @@ class ProfilePhoto(models.Model):
 
 class CVFile(models.Model):
     """Uploadable CV/resume file served as a download across the site."""
-    cv_file = CloudinaryField("CV File (PDF)", folder="cv", resource_type="raw")
+    cv_file = CloudinaryField("CV File (PDF)", folder="cv", resource_type="raw", type="upload")
     label = models.CharField(max_length=100, default="Getachew Zemicheal Hadgu - CV")
     updated_at = models.DateTimeField(auto_now=True)
 
