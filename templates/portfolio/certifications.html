@@ -23,7 +23,8 @@
           <div class="cert-logo-wrap">
             <img src="https://upload.wikimedia.org/wikipedia/en/8/8b/Mekelle_Institute_of_Technology.png"
                  alt="Mekelle University" class="cert-logo"
-                 onerror="this.src='{% static 'images/MIT.jpg' %}';this.onerror=null;">
+                 data-fallback="{% static 'images/MIT.jpg' %}"
+                 onerror="this.src=this.dataset.fallback;this.onerror=null;">
           </div>
           <div class="cert-issuer">Mekelle University</div>
           <h5 class="cert-name">BSc Computer Science &amp; Engineering</h5>
