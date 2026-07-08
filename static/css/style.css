@@ -167,6 +167,23 @@ img { max-width: 100%; }
     flex-direction: row !important;
     align-items: center;
   }
+
+  /* Tighten nav items on desktop to prevent overflow */
+  .navbar-nav .nav-link {
+    font-size: 0.82rem !important;
+    padding: 0.4rem 0.5rem !important;
+  }
+
+  /* Smaller Book Training button in navbar only */
+  .navbar-nav .btn-primary-custom {
+    font-size: 0.8rem;
+    padding: 0.35rem 0.75rem;
+  }
+
+  /* Shrink brand text slightly if needed */
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
 }
 
 .navbar-brand {
@@ -180,8 +197,8 @@ img { max-width: 100%; }
 }
 
 .navbar-logo {
-  width: 36px;
-  height: 36px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--primary);
