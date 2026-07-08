@@ -894,6 +894,18 @@ body:not(.light-mode) .cert-logo {
   line-height: 1;
 }
 
+.cert-logo-text-badge {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 2px solid var(--primary);
+  border-radius: 6px;
+  padding: 4px 8px;
+}
+
 .cert-verify-btn {
   display: inline-flex;
   align-items: center;
