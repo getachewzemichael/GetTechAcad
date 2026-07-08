@@ -66,11 +66,19 @@
     <a class="navbar-brand" href="{% url 'home' %}" aria-label="Get.TechAcad Home">
       <span class="brand-get">Get</span><span class="brand-dot">.</span><span class="brand-tech">TechAcad</span>
     </a>
-    <button class="navbar-toggler" type="button"
-            data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+
+    <!-- Mobile: theme toggle + hamburger always visible -->
+    <div class="d-flex align-items-center gap-2 d-lg-none">
+      <button class="theme-toggle" id="themeToggleMobile" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <i class="bi bi-moon-fill" id="themeIconMobile" aria-hidden="true"></i>
+      </button>
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto align-items-lg-center gap-1" role="menubar">
         <li class="nav-item" role="none"><a class="nav-link {% block nav_home %}{% endblock %}" href="{% url 'home' %}" role="menuitem">Home</a></li>
@@ -86,7 +94,8 @@
             &#128218; Book Training
           </a>
         </li>
-        <li class="nav-item ms-1" role="none">
+        <!-- Desktop-only theme toggle -->
+        <li class="nav-item ms-1 d-none d-lg-flex align-items-center" role="none">
           <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode" title="Toggle theme">
             <i class="bi bi-moon-fill" id="themeIcon" aria-hidden="true"></i>
           </button>

@@ -222,8 +222,26 @@ img { max-width: 100%; }
   background: rgba(31,218,87,0.1);
 }
 
-.navbar-toggler { border-color: var(--border); }
-.navbar-toggler-icon { filter: invert(1); }
+.navbar-toggler {
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+  padding: 6px 10px;
+  background: rgba(31, 218, 87, 0.08);
+  transition: var(--transition);
+}
+
+.navbar-toggler:hover,
+.navbar-toggler:focus {
+  background: rgba(31, 218, 87, 0.2);
+  box-shadow: 0 0 0 3px rgba(31, 218, 87, 0.25);
+  outline: none;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+  width: 1.3em;
+  height: 1.3em;
+}
 
 /* ===== SECTION BASE ===== */
 section { padding: 50px 0; }

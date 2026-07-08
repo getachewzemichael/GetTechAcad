@@ -1,25 +1,32 @@
 // ===== DARK / LIGHT MODE TOGGLE =====
 (function () {
-  const btn  = document.getElementById('themeToggle');
-  const icon = document.getElementById('themeIcon');
-  if (!btn) return;
+  // Handles both desktop (#themeToggle) and mobile (#themeToggleMobile) buttons
+  function applyTheme(isLight) {
+    document.body.classList.toggle('light-mode', isLight);
+    ['themeIcon', 'themeIconMobile'].forEach(function (id) {
+      const icon = document.getElementById(id);
+      if (!icon) return;
+      if (isLight) {
+        icon.classList.replace('bi-moon-fill', 'bi-sun-fill');
+      } else {
+        icon.classList.replace('bi-sun-fill', 'bi-moon-fill');
+      }
+    });
+  }
 
   // Apply saved preference immediately (no flash)
   const saved = localStorage.getItem('theme');
-  if (saved === 'light') {
-    document.body.classList.add('light-mode');
-    icon.classList.replace('bi-moon-fill', 'bi-sun-fill');
-  }
+  applyTheme(saved === 'light');
 
-  btn.addEventListener('click', function () {
-    const isLight = document.body.classList.toggle('light-mode');
-    if (isLight) {
-      icon.classList.replace('bi-moon-fill', 'bi-sun-fill');
-      localStorage.setItem('theme', 'light');
-    } else {
-      icon.classList.replace('bi-sun-fill', 'bi-moon-fill');
-      localStorage.setItem('theme', 'dark');
-    }
+  // Attach click to both buttons
+  ['themeToggle', 'themeToggleMobile'].forEach(function (id) {
+    const btn = document.getElementById(id);
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      const isLight = !document.body.classList.contains('light-mode');
+      applyTheme(isLight);
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    });
   });
 })();
 
