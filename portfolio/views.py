@@ -89,6 +89,25 @@ def debug_media(request):
     })
 
 
+def course_django(request):
+    modules = [
+        {"number": "00", "title": "Setup & Orientation",          "duration": "Day 1"},
+        {"number": "01", "title": "Python Fundamentals",           "duration": "2 Weeks"},
+        {"number": "02", "title": "HTML, CSS & Bootstrap 5",       "duration": "1 Week"},
+        {"number": "03", "title": "Introduction to Django",        "duration": "1 Week"},
+        {"number": "04", "title": "Models & Database ORM",         "duration": "1.5 Weeks"},
+        {"number": "05", "title": "Forms & Validation",            "duration": "1 Week"},
+        {"number": "06", "title": "Django Admin Panel",            "duration": "3 Days"},
+        {"number": "07", "title": "User Authentication",           "duration": "1 Week"},
+        {"number": "08", "title": "Class-Based Views",             "duration": "4 Days"},
+        {"number": "09", "title": "Django REST Framework",         "duration": "1.5 Weeks"},
+        {"number": "10", "title": "Frontend Integration & AJAX",   "duration": "1 Week"},
+        {"number": "11", "title": "Deployment to Production",      "duration": "4 Days"},
+        {"number": "12", "title": "Capstone Project",              "duration": "2 Weeks"},
+    ]
+    return render(request, "portfolio/course_django.html", {"modules": modules})
+
+
 def download_cv(request):
     """
     Serve CV directly from static files - reliable, no auth issues.

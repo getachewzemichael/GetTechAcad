@@ -13,4 +13,5 @@ urlpatterns = [
     path("book-training/", views.book_training, name="book_training"),
     path("download-cv/", views.download_cv, name="download_cv"),
     path("debug-media/", views.debug_media, name="debug_media"),
+    path("courses/python-django/", views.course_django, name="course_django"),
 ]

@@ -1,0 +1,273 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Python-Django Full Stack Course | Get.TechAcad{% endblock %}
+{% block nav_services %}active{% endblock %}
+
+{% block content %}
+
+<div class="page-hero">
+  <div class="container">
+    <h1 class="page-hero-title">Python-Django Full Stack</h1>
+    <p class="page-hero-sub">Web Development Course — Get.TechAcad</p>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+
+    <!-- Course Overview -->
+    <div class="row align-items-center g-5 mb-5">
+      <div class="col-lg-7 fade-up">
+        <div class="hero-badge">Professional Course</div>
+        <h2 class="section-title">Build Real-World Web Applications</h2>
+        <div class="section-divider"></div>
+        <p class="about-body-text">
+          This course takes you from <strong class="about-body-strong">zero programming knowledge</strong>
+          to building and deploying complete, production-ready web applications using
+          <strong class="about-body-accent">Python and Django</strong>.
+        </p>
+        <p class="about-body-text">
+          You will learn through hands-on projects, real code, and structured lectures designed
+          by an experienced instructor with a strong academic and industry background.
+        </p>
+        <div class="row g-3 mt-3">
+          <div class="col-sm-6">
+            <div class="info-card">
+              <div class="info-card-label">Level</div>
+              <div class="info-card-value">🎯 Beginner to Advanced</div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="info-card">
+              <div class="info-card-label">Duration</div>
+              <div class="info-card-value">⏱️ 4–12 Weeks</div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="info-card">
+              <div class="info-card-label">Format</div>
+              <div class="info-card-value">💻 Hands-On Practical</div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="info-card">
+              <div class="info-card-label">Certificate</div>
+              <div class="info-card-value">🏆 Upon Completion</div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex gap-3 mt-4 flex-wrap">
+          <a href="{% url 'book_training' %}" class="btn-primary-custom">
+            <i class="bi bi-calendar-check me-2"></i>Enroll Now
+          </a>
+          <a href="{% url 'download_cv' %}" class="btn-outline-custom">
+            <i class="bi bi-download me-2"></i>Download Course Guide
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-5 fade-up">
+        <div class="course-hero-card">
+          <div class="course-tech-stack">
+            <span class="course-tech-badge">🐍 Python</span>
+            <span class="course-tech-badge">🌐 Django</span>
+            <span class="course-tech-badge">🗄️ PostgreSQL</span>
+            <span class="course-tech-badge">🎨 Bootstrap 5</span>
+            <span class="course-tech-badge">🔗 REST API</span>
+            <span class="course-tech-badge">☁️ Cloudinary</span>
+            <span class="course-tech-badge">🚀 Render Deploy</span>
+            <span class="course-tech-badge">🔧 Git & GitHub</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- What You Will Learn -->
+    <div class="text-center mb-5 fade-up">
+      <h2 class="section-title">What You Will Learn</h2>
+      <div class="section-divider"></div>
+      <p class="section-subtitle">Skills you will master by the end of this course</p>
+    </div>
+    <div class="row g-4 mb-5">
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="card-dark h-100">
+          <span class="card-icon">🐍</span>
+          <h4 class="card-title">Python Programming</h4>
+          <ul class="feature-list">
+            <li>Variables, data types, operators</li>
+            <li>Lists, tuples, sets, dictionaries</li>
+            <li>Functions and error handling</li>
+            <li>Object-Oriented Programming</li>
+            <li>File handling and modules</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="card-dark h-100">
+          <span class="card-icon">🌐</span>
+          <h4 class="card-title">Django Framework</h4>
+          <ul class="feature-list">
+            <li>MVT architecture</li>
+            <li>URL routing and views</li>
+            <li>Templates and DTL</li>
+            <li>Models and ORM</li>
+            <li>Forms and validation</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="card-dark h-100">
+          <span class="card-icon">🗄️</span>
+          <h4 class="card-title">Database Management</h4>
+          <ul class="feature-list">
+            <li>SQLite for development</li>
+            <li>PostgreSQL for production</li>
+            <li>Migrations</li>
+            <li>CRUD operations</li>
+            <li>Model relationships</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="card-dark h-100">
+          <span class="card-icon">🔗</span>
+          <h4 class="card-title">REST API Development</h4>
+          <ul class="feature-list">
+            <li>Django REST Framework</li>
+            <li>Serializers</li>
+            <li>Authentication & permissions</li>
+            <li>API testing with Postman</li>
+            <li>Frontend integration</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="card-dark h-100">
+          <span class="card-icon">🔒</span>
+          <h4 class="card-title">Authentication & Security</h4>
+          <ul class="feature-list">
+            <li>User registration and login</li>
+            <li>Password reset</li>
+            <li>CSRF protection</li>
+            <li>Permission control</li>
+            <li>Production security settings</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="card-dark h-100">
+          <span class="card-icon">🚀</span>
+          <h4 class="card-title">Deployment</h4>
+          <ul class="feature-list">
+            <li>Production settings</li>
+            <li>WhiteNoise static files</li>
+            <li>Cloudinary media storage</li>
+            <li>Deploy to Render</li>
+            <li>Environment variables</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Course Modules -->
+    <div class="text-center mb-5 fade-up">
+      <h2 class="section-title">Course Modules</h2>
+      <div class="section-divider"></div>
+      <p class="section-subtitle">12 structured modules — from setup to deployment</p>
+    </div>
+    <div class="row g-3 mb-5">
+      {% for module in modules %}
+      <div class="col-lg-6 fade-up">
+        <div class="course-module-card">
+          <div class="course-module-num">{{ module.number }}</div>
+          <div class="course-module-body">
+            <div class="course-module-title">{{ module.title }}</div>
+            <div class="course-module-duration">⏱️ {{ module.duration }}</div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- Projects You Will Build -->
+    <div class="text-center mb-5 fade-up">
+      <h2 class="section-title">Projects You Will Build</h2>
+      <div class="section-divider"></div>
+      <p class="section-subtitle">Every module ends with a real hands-on project</p>
+    </div>
+    <div class="row g-4 mb-5">
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="project-card">
+          <div class="project-header"><span class="project-icon">🧮</span><h5 class="project-name">Grade Calculator</h5></div>
+          <div class="project-body">
+            <p class="project-desc">CLI app that calculates student grades and saves results to a file.</p>
+            <div><span class="tech-badge">Python</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="project-card">
+          <div class="project-header"><span class="project-icon">🎨</span><h5 class="project-name">Responsive Landing Page</h5></div>
+          <div class="project-body">
+            <p class="project-desc">Fully responsive landing page using Bootstrap 5 with all sections.</p>
+            <div><span class="tech-badge">HTML</span><span class="tech-badge">CSS</span><span class="tech-badge">Bootstrap</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="project-card">
+          <div class="project-header"><span class="project-icon">🗂️</span><h5 class="project-name">Django Portfolio Site</h5></div>
+          <div class="project-body">
+            <p class="project-desc">Multi-page portfolio website with templates, static files, and views.</p>
+            <div><span class="tech-badge">Django</span><span class="tech-badge">Bootstrap</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="project-card">
+          <div class="project-header"><span class="project-icon">📝</span><h5 class="project-name">Blog Application</h5></div>
+          <div class="project-body">
+            <p class="project-desc">Full blog with categories, tags, posts, and admin panel.</p>
+            <div><span class="tech-badge">Django ORM</span><span class="tech-badge">Models</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="project-card">
+          <div class="project-header"><span class="project-icon">🔌</span><h5 class="project-name">REST API — Todo App</h5></div>
+          <div class="project-body">
+            <p class="project-desc">Full RESTful API with authentication, permissions, and Postman testing.</p>
+            <div><span class="tech-badge">DRF</span><span class="tech-badge">API</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="project-card">
+          <div class="project-header"><span class="project-icon">🚀</span><h5 class="project-name">Capstone — Deployed App</h5></div>
+          <div class="project-body">
+            <p class="project-desc">Complete full stack web application deployed live to production.</p>
+            <div><span class="tech-badge">Full Stack</span><span class="tech-badge">PostgreSQL</span><span class="tech-badge">Render</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center fade-up">
+      <div class="services-final-cta">
+        <h3 class="services-cta-title">Ready to Start Your Developer Journey?</h3>
+        <p class="services-cta-text">Join the Python-Django Full Stack course at Get.TechAcad and build real applications from day one.</p>
+        <div class="d-flex gap-3 justify-content-center flex-wrap">
+          <a href="{% url 'book_training' %}" class="btn-primary-custom">
+            <i class="bi bi-calendar-check me-2"></i>Book Your Seat
+          </a>
+          <a href="{% url 'contact' %}" class="btn-outline-custom">
+            <i class="bi bi-chat-dots me-2"></i>Ask a Question
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{% endblock %}
