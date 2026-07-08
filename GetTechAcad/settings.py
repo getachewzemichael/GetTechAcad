@@ -67,7 +67,7 @@ TEMPLATES = [
 WSGI_APPLICATION = "GetTechAcad.wsgi.application"
 
 # ===== DATABASE =====
-# Uses PostgreSQL on Render (via DATABASE_URL env var), SQLite locally
+# Uses PostgreSQL on Render via DATABASE_URL env var (Neon or Render PG), SQLite locally
 DATABASE_URL = os.environ.get("DATABASE_URL")
 if DATABASE_URL:
     DATABASES = {
@@ -75,6 +75,7 @@ if DATABASE_URL:
             default=DATABASE_URL,
             conn_max_age=600,
             ssl_require=True,
+            conn_health_checks=True,
         )
     }
 else:
