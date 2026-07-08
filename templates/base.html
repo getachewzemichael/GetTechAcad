@@ -89,6 +89,7 @@
         <li class="nav-item" role="none"><a class="nav-link {% block nav_projects %}{% endblock %}" href="{% url 'projects' %}" role="menuitem">Projects</a></li>
         <li class="nav-item" role="none"><a class="nav-link {% block nav_certifications %}{% endblock %}" href="{% url 'certifications' %}" role="menuitem">Certificates</a></li>
         <li class="nav-item" role="none"><a class="nav-link {% block nav_services %}{% endblock %}" href="{% url 'services' %}" role="menuitem">Services</a></li>
+        <li class="nav-item" role="none"><a class="nav-link {% block nav_courses %}{% endblock %}" href="{% url 'course_django' %}" role="menuitem">Courses</a></li>
         <li class="nav-item" role="none"><a class="nav-link {% block nav_contact %}{% endblock %}" href="{% url 'contact' %}" role="menuitem">Contact</a></li>
         <li class="nav-item ms-2" role="none">
           <a class="btn-primary-custom" href="{% url 'book_training' %}" role="menuitem" aria-label="Book a Training Session">
@@ -170,6 +171,7 @@
           <li><a href="{% url 'experience' %}">Experience</a></li>
           <li><a href="{% url 'projects' %}">Projects</a></li>
           <li><a href="{% url 'services' %}">Services</a></li>
+          <li><a href="{% url 'course_django' %}">Django Course</a></li>
           <li><a href="{% url 'contact' %}">Contact</a></li>
         </ul>
       </div>
