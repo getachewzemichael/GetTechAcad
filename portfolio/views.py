@@ -108,6 +108,23 @@ def course_django(request):
     return render(request, "portfolio/course_django.html", {"modules": modules})
 
 
+def download_course_guide(request):
+    """Serve the Django course guide as a download."""
+    import os
+    from django.conf import settings as django_settings
+    from django.http import FileResponse, Http404
+
+    guide_path = os.path.join(django_settings.BASE_DIR, "static", "cv", "Django-Course-Guide.md")
+    if not os.path.exists(guide_path):
+        raise Http404("Course guide not available.")
+    response = FileResponse(
+        open(guide_path, "rb"),
+        content_type="text/markdown"
+    )
+    response["Content-Disposition"] = 'attachment; filename="Get.TechAcad-Django-Course-Guide.md"'
+    return response
+
+
 def download_cv(request):
     """
     Serve CV directly from static files - reliable, no auth issues.
