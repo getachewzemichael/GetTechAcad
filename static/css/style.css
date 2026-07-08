@@ -865,6 +865,36 @@ section { padding: 50px 0; }
 
 .cert-verify-wrap { border-top: 1px solid var(--border); }
 
+/* ===== CERT LOGO ===== */
+.cert-logo-wrap {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.cert-logo {
+  max-height: 56px;
+  max-width: 160px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0.95);
+}
+
+.cert-logo-sm {
+  max-height: 48px;
+  max-width: 48px;
+}
+
+body:not(.light-mode) .cert-logo {
+  filter: brightness(1.1) drop-shadow(0 0 4px rgba(255,255,255,0.08));
+}
+
+.cert-icon-fallback {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
 .cert-verify-btn {
   display: inline-flex;
   align-items: center;
