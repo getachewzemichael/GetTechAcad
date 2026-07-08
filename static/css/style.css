@@ -867,31 +867,30 @@ section { padding: 50px 0; }
 
 /* ===== CERT LOGO ===== */
 .cert-logo-wrap {
-  height: 64px;
+  height: 52px;
   display: flex;
   align-items: center;
   margin-bottom: 0.75rem;
 }
 
 .cert-logo {
-  max-height: 56px;
-  max-width: 160px;
+  max-height: 44px;
+  max-width: 120px;
   width: auto;
   object-fit: contain;
-  filter: brightness(0.95);
 }
 
 .cert-logo-sm {
-  max-height: 48px;
-  max-width: 48px;
+  max-height: 36px;
+  max-width: 36px;
 }
 
 body:not(.light-mode) .cert-logo {
-  filter: brightness(1.1) drop-shadow(0 0 4px rgba(255,255,255,0.08));
+  filter: brightness(1.1) drop-shadow(0 0 3px rgba(255,255,255,0.06));
 }
 
 .cert-icon-fallback {
-  font-size: 2.5rem;
+  font-size: 2rem;
   line-height: 1;
 }
 
